@@ -18,7 +18,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-function Navbar(props) {
+function Navbar({ setIsSidebarOpen }) {
   const dispatch = useDispatch();
   const theme = useTheme();
   return (
@@ -34,6 +34,7 @@ function Navbar(props) {
         <FlexBetween>
           <IconButton
             onClick={() => {
+              setIsSidebarOpen((prevState) => !prevState);
               console.log("Open/close sidebar");
             }}
           >
