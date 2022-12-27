@@ -94,6 +94,7 @@ const navItems = [
 ];
 
 function Sidebar({
+  user,
   drawerWidth,
   setIsSidebarOpen,
   isSidebarOpen,
@@ -103,6 +104,7 @@ function Sidebar({
   const [active, setActive] = useState("");
   const navigate = useNavigate();
   const theme = useTheme();
+  console.log(user.name);
   useEffect(() => {
     setActive(pathname.substring(1));
   }, [pathname]);
@@ -192,6 +194,44 @@ function Sidebar({
                 );
               })}
             </List>
+          </Box>
+          <Box>
+            <Divider />
+            <FlexBetween
+              textTransform={"none"}
+              gap={"1rem"}
+              m={"1.5rem 2rem 0 3rem"}
+            >
+              <Box
+                component={"img"}
+                alt={"profile"}
+                src={profileImage}
+                height={"40px"}
+                width={"40px"}
+                borderRadius={"50%"}
+                sx={{ objectFit: "cover" }}
+              />
+
+              <Box textAlign={"left"}>
+                <Typography
+                  fontSize={"0.9rem"}
+                  fontWeight={"bold"}
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
+                  {user.name}
+                </Typography>
+                <Typography
+                  fontSize={"0.8rem"}
+                  fontWeight={"bold"}
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
+                  {user.occupation}
+                </Typography>
+              </Box>
+              <SettingsOutlined
+                sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
+              />
+            </FlexBetween>
           </Box>
         </Drawer>
       )}
