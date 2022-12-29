@@ -12,7 +12,9 @@ import generalRoutes from "./routes/generalRouter.js";
 
 // data imports
 import User from "./models/User.js";
-import { dataUser } from "./data/index.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import { dataUser, dataProduct, dataProductStat } from "./data/index.js";
 
 /* CONFIGURATION */
 dotenv.config();
@@ -44,9 +46,11 @@ console.log(process.env.MONGO_URL);
       /*
       ONLY ADD DATA ONE TIME
 
-       await User.insertMany(dataUser);
-       console.log("Data added");
-
+      await User.insertMany(dataUser);
+      await Product.insertMany(dataProduct);
+      await ProductStat.insertMany(dataProductStat);
+      console.log("Data added");
+      
       */
     });
   } catch (error) {
