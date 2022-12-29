@@ -35,8 +35,6 @@ app.use("/sales", salesRoutes);
 /* MONGOOSE */
 const PORT = process.env.PORT || 9000;
 
-console.log(process.env.MONGO_URL);
-
 (async function () {
   try {
     await mongoose.connect(process.env.MONGO_URL);
