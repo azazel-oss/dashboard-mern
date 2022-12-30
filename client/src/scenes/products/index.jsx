@@ -59,7 +59,7 @@ const Product = ({
           size="small"
           onClick={() => setIsExpanded(!isExpanded)}
         >
-          See More
+          See {isExpanded ? "Less" : "More"}
         </Button>
       </CardActions>
       <Collapse
