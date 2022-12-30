@@ -120,9 +120,9 @@ const Products = () => {
           ))}
         </Box>
       ) : (
-        <>
+        <Box display={"flex"} justifyContent={"center"} mt={"2rem"}>
           <CircularProgress color={"secondary"} />
-        </>
+        </Box>
       )}
     </Box>
   );
