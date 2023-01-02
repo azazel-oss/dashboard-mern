@@ -51,7 +51,7 @@ function Customers() {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="CUSTOMERS" subtitle="List of Customers" />
+      <Header title="CUSTOMERS" subTitle="List of Customers" />
       <Box
         mt="40px"
         height="65vh"
