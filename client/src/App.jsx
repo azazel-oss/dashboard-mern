@@ -13,6 +13,7 @@ import Geography from "./scenes/geography";
 import Overview from "./scenes/overview";
 import DailySales from "./scenes/daily/index.jsx";
 import MonthlySales from "./scenes/monthly/index.jsx";
+import BreakdownSales from "./scenes/breakdown/index.jsx";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -36,6 +37,7 @@ function App() {
               <Route path={"/overview"} element={<Overview />} />
               <Route path={"/daily"} element={<DailySales />} />
               <Route path={"/monthly"} element={<MonthlySales />} />
+              <Route path={"/breakdown"} element={<BreakdownSales />} />
             </Route>
           </Routes>
         </ThemeProvider>
